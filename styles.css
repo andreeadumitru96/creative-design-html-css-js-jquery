@@ -1,0 +1,443 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* end of CSS reset */
+
+.container {
+    width: 1170px;
+    font-family: Arial;
+    margin: 0 auto;
+}
+
+/* Header section */
+
+
+.header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.header__html5 {
+    display: flex;
+    flex-direction: row;
+}
+
+.html5-image {
+    display: flex;
+    margin: 20px 10px 10px 0px;
+    width: 64px;
+    height: 64px;
+}
+
+.html5-text {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-register, .menu-about, .menu-contact {
+    margin-right: 50px;
+}
+
+.menu-subtext {
+    font-size: 12px;
+    color: black;  
+}
+
+.menu-text {
+    color: #7084a9;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Main section */
+
+.navigation__list {
+    display: flex;
+    background-color: black;
+    height: 60px;
+    margin-top: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.list-item {
+    color: white;
+    margin: 30px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.list-item-home {
+    color: #b25d74;
+    margin-left: 48px;
+    cursor: pointer;
+}
+
+.carousel-cell {
+    width: 100%;
+    background: url('./assets/carousel.jpg');
+    background-size: cover;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+	justify-content: center;
+	align-items: center;
+}
+.carousel-cell__title {
+    font-size: 26px;
+    margin-bottom: 16px;
+    margin-top: 40px;
+}
+
+.title-highlight {
+    font-weight: bold;
+}
+
+.carousel-cell__text {
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 26%;
+}
+
+.carousel-cell__button {
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    width: 126px;
+    height: 42px;
+    margin-top: 60px;
+    border: 1px solid white;
+}
+
+.button-title {
+    font-size: 12px;
+}
+
+.fa-angle-right {
+    margin-left: 10px;
+}
+
+/* position dots in carousel */
+.flickity-page-dots {
+    bottom: 50px !important;
+}
+
+  /* white circles */
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 1px solid white;
+}
+
+  /* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+    background: white;
+}
+
+/* no circle */
+.flickity-button {
+  background: transparent !important;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+
+.main__projects {
+    margin-top: 60px;
+}
+
+.projects-title {
+    display: flex;
+    justify-content: center;
+    color: #7084a9;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.projects-sorting {
+    display: flex;
+    direction: row;
+    justify-content: center;
+}
+
+.projects-sorting__text {
+    display: flex;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.projects-sorting__dropdown {
+    margin-left: 20px;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.dropdown-input {
+    padding: 5px 0px 5px 10px;
+    background-color: #eff0f2;
+    border-radius: 2px;
+    border: 0px;
+    color: #838888;
+    cursor: pointer;
+}
+
+.fa-angle-down {
+    margin-left: -20px;
+    margin-top: 8px;
+    color: #838888;
+}
+
+.projects-list {
+    display: flex;
+    direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    justify-content: center;
+    
+}
+
+.item--pink {
+    background: url('./assets/pink.png');
+    background-size: cover;
+}
+
+.item--purple {
+    background: url('./assets/purple.png');
+    background-size: cover;
+}
+
+.item--brown {
+    background: url('./assets/brown.png');
+}
+
+.projects-list__item {
+    width: 320px;
+    height: 250px;
+    margin: 28px;
+}
+
+.item-title {
+    color: white;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-style: Arial;
+    font-size: 16px;
+}
+
+.questions {
+    padding: 30px;
+    margin-top: 40px;
+    background-color: #c1cada;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.questions__title {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.questions__accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-item__content {
+    display: none;
+    margin: 26px 30px;
+}
+
+.accordion-item__title {
+    background-color: #677ca3;
+    color: white;
+    padding: 16px 36px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.accordion-item__title .fas {
+    color: white;
+}
+
+.accordion__title--black {
+	background-color: black;
+}
+
+.content-logo {
+    margin-right: 30px;
+}
+
+.content-text-footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-text-footer-p {
+    font-size: 12px;
+    color: #677ca3;
+}
+
+.content-text-footer-button {
+    border-radius: 4px;
+    background-color: #677ca3;
+    border: 1px solid #41557a;
+    color: white;
+    font-size: 12px;
+    width: 156px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+    background-color: black;
+}
+
+.footer__specifications {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.specifications-block {
+    justify-content: space-between;
+}
+
+.block-list-item a {
+    text-decoration: none;
+}
+
+.specifications-block__list--blue a {
+    color: #51617f;
+}
+
+.specifications-block__list--pink a {
+    color: #ab596f;
+}
+
+.specifications-block__title {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.block-list-item {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+
+.block-list-item a:before {
+    content: "\f0c1";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 700; 
+    margin-right: 10px;
+}
+
+
+
+/* Media Queries */
+
+/*Small desktop**/
+@media all and (min-width: 992px) and (max-width: 1200px) {
+	.container {
+		width: 960px;
+	}
+}
+
+/*Tablet**/
+@media all and (min-width: 756px) and (max-width: 991px) { 
+	.container {
+		width: 100%;
+	}
+}
+
+/*Mobile**/
+@media all and (max-width: 755px) {
+	.container {
+		width: 100%;
+	}
+}
