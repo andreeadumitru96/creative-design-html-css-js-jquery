@@ -6,7 +6,21 @@ let resetAccordion = () => {
     $('.accordion-item__title').append('<i class="fas fa-angle-down"></i>');
 };
 
+let doNavigationStickyScroll = () => {
+    
+    let $navigation = $('.navigation');
+    let headerWidthOffset = $navigation.height() + 3;
+    
+    if($(window).scrollTop() > headerWidthOffset) {
+        $navigation.addClass("js-navigation-sticky");
+    } else {
+        $navigation.removeClass("js-navigation-sticky");
+    }
+}
+
 let bindEventHandlers = () => {
+    $(window).on('scroll', doNavigationStickyScroll);
+
     $('.main__carousel').flickity({   
         cellAlign: 'left',
         contain: true
@@ -25,6 +39,8 @@ let bindEventHandlers = () => {
             $(this).append('<i class="fas fa-angle-up"></i>');         
         }
     });
+
+    $
 };
 
 $(document).ready(() => {

@@ -65,7 +65,6 @@ body {
 
 /* Header section */
 
-
 .header .container{
     display: flex;
     flex-direction: row;
@@ -77,6 +76,7 @@ body {
 .header__html5 {
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
 }
 
 .html5-image {
@@ -118,10 +118,18 @@ body {
 .navigation__list {
     display: flex;
     background-color: black;
-    height: 60px;
-    margin-top: 10px;
+    height: 70px;
+    margin-top: 0px;
     align-items: center;
     width: 100%;
+}
+
+.js-navigation-sticky {
+    position: fixed;
+	top: 0;
+    left: 0;
+	width: 100%; 
+	z-index: 999;
 }
 
 .list-item {
@@ -457,8 +465,6 @@ body {
     color: white;
     padding: 14px;
 }
-
-
 
 /* Media Queries */
 
