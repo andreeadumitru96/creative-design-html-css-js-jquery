@@ -40,7 +40,19 @@ let bindEventHandlers = () => {
         }
     });
 
-    $
+    $('.mobile-list-button').on('click', () => {
+        $('.mobile-list').toggle('fast');
+    });
+
+    $(document).on('click', (e) => {
+        let $mobileList = $('.mobile-list');
+        let $mobileListBtn = $('.mobile-list-button')
+
+        if (!$mobileListBtn.is(e.target) && $mobileListBtn.has(e.target).length === 0) {
+            $mobileList.hide();
+        }
+    
+    })
 };
 
 $(document).ready(() => {
