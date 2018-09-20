@@ -516,7 +516,7 @@ body {
     }
 
     .header__mobile {
-        display: block !important;
+        display: block;
     }
     .mobile-list {
         display: none;
@@ -550,5 +550,14 @@ body {
         font-size: 18px;
         margin-top: 20px;
         margin-bottom: 30px;
+    }
+
+    .footer__specifications {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .specifications-block {
+        padding: 16px;
     }
 }
